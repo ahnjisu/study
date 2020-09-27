@@ -2,11 +2,13 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Swing extends JFrame {
-	
+
 	JFrame f = new JFrame();
 
 	Container c = getContentPane();
 	JPanel p1 = new JPanel();
+	JPanel p2 = new JPanel();
+	JPanel p3 = new JPanel();
 
 	ImageIcon egg = new ImageIcon("images\\egg.jpg");
 	JLabel imageLabel = new JLabel(egg);
@@ -30,15 +32,15 @@ public class Swing extends JFrame {
 
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		c.add(imageLabel);
-		c.add(textLabel);
-
 		p1.add(b1);
 		p1.add(b2);
 		p1.add(b3);
+		p2.add(imageLabel);
+		p3.add(textLabel);
 
-		this.add(p1, BorderLayout.SOUTH);
-
+		this.add(p2);
+		this.add(p3);
+		this.add(p1);
 	}
 
 	public static void main(String[] args) {
