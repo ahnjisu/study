@@ -1,0 +1,51 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class Swing extends JFrame {
+
+	JFrame f = new JFrame();
+	JPanel p1 = new JPanel();
+	JPanel p2 = new JPanel();
+	
+	JButton b1 = new JButton("1");
+	JButton b2 = new JButton("2");
+	JButton b3 = new JButton("3");
+	
+	JCheckBox c1 = new JCheckBox();
+	JCheckBox c2 = new JCheckBox();
+	JCheckBox c3 = new JCheckBox();
+	JCheckBox c4 = new JCheckBox();
+
+	public Swing() {
+		super("버튼과 체크박스");
+
+		this.setLayout(new GridLayout(2, 1));
+
+		this.setSize(300, 400);
+
+		
+		p1.setLayout(new GridLayout(3,1));
+		
+		
+		this.setVisible(true);
+
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		p1.add(b1);
+		p1.add(b2);
+		p1.add(b3);
+
+		p2.add(c1);
+		p2.add(c2);
+		p2.add(c3);
+		p2.add(c4);
+		
+		this.add(p1);
+		this.add(p2);
+
+	}
+
+	public static void main(String[] args) {
+		new Swing();
+	}
+}
