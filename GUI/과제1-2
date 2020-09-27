@@ -1,0 +1,52 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class Swing extends JFrame {
+	
+	JFrame f = new JFrame();
+
+	Container c = getContentPane();
+	JPanel p1 = new JPanel();
+	JPanel p2 = new JPanel();
+	JPanel p3 = new JPanel();
+
+	JButton b1 = new JButton("1");
+	JButton b2 = new JButton("2");
+	JButton b3 = new JButton("3");
+	
+	ImageIcon egg = new ImageIcon("images\\egg.jpg");
+	JLabel imageLabel = new JLabel(egg);
+
+	JLabel textLabel = new JLabel("textarea");
+
+
+	public Swing() {
+		super("스윙 컴포넌트");
+
+		this.setLayout(new GridLayout(1, 3));
+
+		this.setSize(300, 400);
+
+		p1.setLayout(new GridLayout(3, 1));
+
+		this.setVisible(true);
+
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		p1.add(b1);
+		p1.add(b2);
+		p1.add(b3);
+		p2.add(imageLabel);
+		p3.add(textLabel);
+
+		
+
+		this.add(p1);
+		this.add(p2);
+		this.add(p3);
+	}
+
+	public static void main(String[] args) {
+		new Swing();
+	}
+}
