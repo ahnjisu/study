@@ -19,7 +19,7 @@ public class Swing extends JFrame {
 	public Swing() {
 		super("버튼과 체크박스");
 
-		this.setLayout(new GridLayout(2, 1));
+		this.setLayout(new GridLayout(2, 1)); // this는 
 
 		this.setSize(300, 400);
 
